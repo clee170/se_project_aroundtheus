@@ -1,0 +1,12 @@
+@import url("../Vendor/normalize.css");
+@import url("../Vendor/fonts.css");
+
+.page {
+  background-color: black;
+  color: white;
+}
+
+.page__content {
+  margin-left: 200px;
+  margin-right: 200px;
+}
