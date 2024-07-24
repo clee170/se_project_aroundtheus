@@ -1,43 +1,6 @@
 @import url("../Vendor/normalize.css");
 @import url("../Vendor/fonts.css");
-@import url("../Pages/header.css");
-@import url("../Pages/profile.css");
-
-.cards {
-    fonts
-}
-
-.card__list {
-    display: grid;
-    justify-content: center;
-    
-
-}
-
-.card {
-    display: flex;
-}
-
-.card__image {
-    width: 282px;
-    height: 282px;
-}
-
-.card__description {
-    display: flex;
-    background-color: white;
-    color: black;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card__like-button {
-    background: transparent url(../Images/like-inactive.svg) center no-repeat;
-    width: 21px;
-    height: 18px;
-
-}
+@import url("../Blocks/header.css");
+@import url("../Blocks/profile.css");
+@import url("../Blocks/cards.css");
+@import url("../Blocks/media.css");
