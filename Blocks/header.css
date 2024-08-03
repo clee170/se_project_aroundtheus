@@ -21,3 +21,11 @@
 .header {
   margin-top: 45px;
 }
+
+.header__line {
+  display: flex;
+  max-width: 880px;
+  align-items: center;
+  margin-top: 119px;
+  margin-left: 200px;
+}
