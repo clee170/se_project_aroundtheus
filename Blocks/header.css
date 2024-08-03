@@ -20,12 +20,8 @@
 
 .header {
   margin-top: 45px;
-}
 
-.header__line {
-  display: flex;
-  max-width: 880px;
+  border-bottom: 1px;
+  color: #545454;
   align-items: center;
-  margin-top: 119px;
-  margin-left: 200px;
 }
