@@ -4,10 +4,3 @@
 @import url("../Blocks/profile.css");
 @import url("../Blocks/cards.css");
 @import url("../Blocks/media.css");
-
-.footer {
-  max-width: 880px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
