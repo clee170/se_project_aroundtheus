@@ -22,3 +22,13 @@
   border-bottom-color: #545454;
   padding-bottom: 41px;
 }
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 320px;
+    height: 56px;
+    border-bottom: 1px solid;
+    border-bottom-color: #545454;
+    padding-bottom: 41px;
+  }
+}
