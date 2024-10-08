@@ -1,0 +1,15 @@
+.header {
+  margin-top: 45px;
+  border-bottom: 1px solid;
+  border-color: rgba(84, 84, 84, 1);
+  padding-bottom: 41px;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 320px;
+    min-height: 56px;
+
+    padding: 0;
+  }
+}
