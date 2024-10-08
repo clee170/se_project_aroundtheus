@@ -1,16 +1,16 @@
 .header {
   margin-top: 45px;
   border-bottom: 1px solid;
-  border-bottom-color: #545454;
+  border-bottom: 1px solid;
+  opacity: 70%;
   padding-bottom: 41px;
 }
 
 @media screen and (max-width: 480px) {
   .header {
     width: 320px;
-    height: 56px;
-    border-bottom: 1px solid;
-    border-bottom-color: #545454;
+    min-height: 56px;
+
     padding: 0;
   }
 }
