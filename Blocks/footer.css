@@ -16,18 +16,13 @@
 }
 
 @media screen and (max-width: 480px) {
-  
-    .footer {
-      max-width: 282px;
-      width: 100%;
-      margin-left: auto;
-      margin-right auto;
-    }
+  .footer {
+    max-width: 282px;
+  }
 
-    .footer__text {
-      font-size: 14px;
-      margin-top: 48px;
-      margin-bottom: 36px;
-    }
-  
+  .footer__text {
+    font-size: 14px;
+    margin-top: 48px;
+    margin-bottom: 36px;
+  }
 }

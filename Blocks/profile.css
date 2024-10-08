@@ -24,7 +24,7 @@
 }
 
 .profile__edit-button:hover {
-  opacity: 50%;
+  opacity: 60%;
 }
 
 .profile__add-button {
@@ -34,10 +34,11 @@
   margin-left: auto;
   border: 2px;
   border-color: rgba(255, 255, 255, 1);
+  border-radius: 2px;
 }
 
 .profile__add-button:hover {
-  opacity: 50%;
+  opacity: 60%;
 }
 
 .profile__title {
@@ -88,7 +89,6 @@
     font-size: 22px;
     line-height: 1.2;
 
-    grid-area: description;
     margin: 0;
   }
 
@@ -112,7 +112,6 @@
 
     font-size: 14px;
     line-height: 1.2;
-    font-weight: 400;
   }
 
   .profile__add-button {

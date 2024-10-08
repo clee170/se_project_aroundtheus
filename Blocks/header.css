@@ -1,8 +1,7 @@
 .header {
   margin-top: 45px;
   border-bottom: 1px solid;
-  border-bottom: 1px solid;
-  opacity: 70%;
+  border-color: rgba(84, 84, 84, 1);
   padding-bottom: 41px;
 }
 
