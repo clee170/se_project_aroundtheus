@@ -5,11 +5,17 @@
   padding-bottom: 41px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .header {
     width: 320px;
     min-height: 56px;
 
     padding: 0;
+  }
+
+  .header__title {
+    max-width: 126px;
+    min-height: 24px;
+    margin: 28px 167px 32px 27px;
   }
 }
