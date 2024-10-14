@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 19px;
+  display: ;
+}
+
+.modal__opened {
+  display: flex;
+}
+
+.modal__container {
+  background-color: #fff;
+  margin: auto;
+  padding: 36px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal__close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  background-image: url(../images/Close\ Icon.svg);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  rotate: 45degrees;
+}
+
+.modal__heading {
+  max-width: 330px;
+  min-height: 23px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #000;
+  margin: 0;
+}
+
+.model__form {
+  max-width: 430px;
+  min-height: 330px;
+}
+
+.modal__button {
+  border-radius: 2px;
+  max-width: 358px;
+  min-height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+.modal__button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+@media screen and (max-width: 700px) {
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    top: -91px;
+  }
+}
