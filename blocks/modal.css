@@ -11,7 +11,7 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 19px;
-  display: ;
+  display: none;
 }
 
 .modal__opened {
@@ -56,12 +56,9 @@
   margin: 0;
 }
 
-.model__form {
-  max-width: 430px;
-  min-height: 27px;
-  width: 100%;
+.modal__form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .modal__button {
