@@ -22,6 +22,7 @@
   background-color: #fff;
   margin: auto;
   padding: 36px;
+  box-sizing: border-box;
   border-radius: 10px;
   position: relative;
   height: 330px;
@@ -59,7 +60,7 @@
 .modal__form {
   display: flex;
   flex-direction: column;
-  width: 358px;
+  width: 100%;
   min-height: 27px;
   gap: 30px;
   color: #000;
@@ -91,6 +92,7 @@
     max-width: 238px;
     min-height: 22px;
     font-size: 18px;
+    padding-bottom: 75px;
   }
 
   .modal__close {
@@ -98,5 +100,11 @@
     height: 26px;
     top: -40px;
     left: 325px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .modal__close {
+    left: 250px;
   }
 }
