@@ -107,4 +107,9 @@
   .modal__close {
     left: 250px;
   }
+
+  .modal__button {
+    max-width: 238px;
+    min-height: 46px;
+  }
 }
