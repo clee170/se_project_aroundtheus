@@ -44,6 +44,7 @@ const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
 
+
 const cardTitleInput = addCardForm.querySelector(".modal__input-type-title");
 const cardUrlInput = addCardForm.querySelector(".modal__input-type-url");
 
@@ -69,6 +70,24 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  deleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+  // find delete button
+
+  //add event listener to the delete button
+    //cardElement.remove();
+
+
+  //for card image. we have found card image above (cardImageEL)
+    //add click listener to this
+    //openModal with previewImageModal
+
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle('card__like-button_active');
+  });
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
@@ -91,12 +110,7 @@ const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
 const cardTitleInput = addCardForm.querySelector("[name='title']");
 const cardUrlInput = addCardForm.querySelector("[name='url']");
 */
-
-
 }
-
-
-
 /*function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -108,7 +122,6 @@ const cardUrlInput = addCardForm.querySelector("[name='url']");
 
   return cardElement;
 }*/
-
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
@@ -122,3 +135,7 @@ profileEditForm.addEventListener("submit", handleProfileSubmit);
 addCardForm.addEventListener("submit", handleAddCardFormSubmit);
 
 initialCards.forEach((cardData) =>  renderCard(cardData, cardListEl));
+
+
+
+
