@@ -43,7 +43,10 @@ const cardListEl = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
-
+const previewImageModal = document.querySelector("#preview-image-modal");
+const previewImage = previewImageModal.querySelector(".modal__preview-image");
+const previewImageModalClose = previewImageModal.querySelector("#preview-image-modal-close");
+const previewCaption = document.querySelector("#preview_caption");
 
 const cardTitleInput = addCardForm.querySelector(".modal__input-type-title");
 const cardUrlInput = addCardForm.querySelector(".modal__input-type-url");
@@ -53,6 +56,7 @@ const cardUrlInput = addCardForm.querySelector(".modal__input-type-url");
 function closePopup() {
   profileEditmodal.classList.remove("modal_opened");
   addCardModal.classList.remove("modal_opened");
+  previewImageModal.classList.remove("modal_opened");
 }
 
 function renderCard(cardData, wrapper) {
@@ -75,6 +79,13 @@ function getCardElement(cardData) {
   deleteButton.addEventListener("click", () => {
     cardElement.remove();
   });
+  cardElement.addEventListener("click", () => {
+    previewImageModal.classList.add('modal_opened');
+    previewCaption.textContent = cardData.name;
+    previewImage.src = cardData.link;
+    previewImage.alt = cardData.name;
+
+  });
   // find delete button
 
   //add event listener to the delete button
@@ -84,6 +95,10 @@ function getCardElement(cardData) {
   //for card image. we have found card image above (cardImageEL)
     //add click listener to this
     //openModal with previewImageModal
+
+
+  //something in the above code doesnt make sense to me. i need to either hop on a call or try
+  //something new
 
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle('card__like-button_active');
@@ -103,39 +118,30 @@ function handleProfileSubmit(e) {
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   closePopup();
-/*
-const addCardModal = document.querySelector("#add-card-modal");
-const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
-/*const addCardForm = document.querySelector("#add-card-form");
-const cardTitleInput = addCardForm.querySelector("[name='title']");
-const cardUrlInput = addCardForm.querySelector("[name='url']");
-*/
+
 }
-/*function getCardElement(data) {
-  const cardElement = cardTemplate.cloneNode(true);
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
 
-  cardTitleEl.textContent = data.name;
-  cardImageEl.alt = data.name;
-  cardImageEl.src = data.link;
-
-  return cardElement;
-}*/
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
   profileEditmodal.classList.add("modal_opened");
 });
 
+
 modalClose.addEventListener("click", closePopup);
 cardModalClose.addEventListener("click", closePopup);
+previewImageModalClose.addEventListener("click", closePopup);
 
 profileEditForm.addEventListener("submit", handleProfileSubmit);
 addCardForm.addEventListener("submit", handleAddCardFormSubmit);
 
 initialCards.forEach((cardData) =>  renderCard(cardData, cardListEl));
 
+// the code below i dont understand at all. In my mind i
+// understand what I need to call but Im missing something important
 
-
-
+/*function getCardElement(cardData) {
+const previewImage = cardTemplate.cloneNode(true);
+card.addEventListener("click", () => {
+  card.classList.add('preview_image_active');
+});*/

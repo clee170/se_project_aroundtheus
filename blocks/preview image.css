@@ -1,0 +1,20 @@
+.modal_preview {
+    position: fixed;
+}
+
+.modal__container_preview {
+    position: inherit;
+   max-width: 75vw;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+
+}
+
+.modal__close .modal__close_preview {
+    position: absolute;
+    top: 41px;
+    left: 878px;
+}
