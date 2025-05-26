@@ -11,10 +11,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 19px;
   display: none;
+  transition: 5s ease-in-out;
 }
 
 .modal_opened {
   display: flex;
+  animation: fade-inout 0.8s linear;
+
 }
 
 .modal__container {
@@ -90,12 +93,15 @@
   font-weight: 400;
   line-height: 1.2;
   border: none;
+
 }
 
 .modal__button:hover {
   cursor: pointer;
-  opacity: 80%;
+
 }
+
+
 
 @media screen and (max-width: 700px) {
   .modal__container {
@@ -132,4 +138,10 @@
     min-height: 46px;
     font-size: 14px;
   }
+}
+
+
+@keyframes fade-inout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
