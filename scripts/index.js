@@ -52,8 +52,12 @@ const cardTitleInput = addCardForm.querySelector(".modal__input-type-title");
 const cardUrlInput = addCardForm.querySelector(".modal__input-type-url");
 
 //something here in the above code breaks it
+/*function closePopup(previewImageModal) {
+  previewImageModal.classList.remove("modal_opened");
+}*/
 
-function closePopup() {
+
+function closePopup(popup) {
   profileEditmodal.classList.remove("modal_opened");
   addCardModal.classList.remove("modal_opened");
   previewImageModal.classList.remove("modal_opened");
@@ -69,6 +73,7 @@ function handleAddCardFormSubmit(e) {
   const link = cardUrlInput.value;
   renderCard({name, link}, cardListEl);
   closePopup(addCardModal);
+  e.reset(addCardModal);
 }
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -76,7 +81,8 @@ function getCardElement(cardData) {
   const cardTitleEl = cardElement.querySelector(".card__title");
   const likeButton = cardElement.querySelector(".card__like-button");
   const deleteButton = cardElement.querySelector(".card__delete-button");
-  deleteButton.addEventListener("click", () => {
+  deleteButton.addEventListener("click", (evt) => {
+    evt.stopPropagation();
     cardElement.remove();
   });
   cardElement.addEventListener("click", () => {
@@ -100,7 +106,8 @@ function getCardElement(cardData) {
   //something in the above code doesnt make sense to me. i need to either hop on a call or try
   //something new
 
-  likeButton.addEventListener("click", () => {
+  likeButton.addEventListener("click", (e) => {
+    e.stopPropagation();
     likeButton.classList.toggle('card__like-button_active');
   });
   cardTitleEl.textContent = cardData.name;
