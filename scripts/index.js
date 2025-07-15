@@ -73,8 +73,9 @@ function handleAddCardFormSubmit(e) {
   const link = cardUrlInput.value;
   renderCard({name, link}, cardListEl);
   closePopup(addCardModal);
-  e.reset(addCardModal);
+  addCardForm.reset();
 }
+
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -90,7 +91,7 @@ function getCardElement(cardData) {
     previewCaption.textContent = cardData.name;
     previewImage.src = cardData.link;
     previewImage.alt = cardData.name;
-
+    addCardModal.reset();
   });
   // find delete button
 
