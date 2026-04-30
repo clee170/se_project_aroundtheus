@@ -57,10 +57,16 @@ const cardUrlInput = addCardForm.querySelector(".modal__input-type-url");
 }*/
 
 
-function closePopup(popup) {
+/*function closePopup(popup) {
   profileEditmodal.classList.remove("modal_opened");
   addCardModal.classList.remove("modal_opened");
   previewImageModal.classList.remove("modal_opened");
+}*/
+
+
+
+function closePopup(popup) {
+  popup.classList.remove("modal_opened");
 }
 
 function renderCard(cardData, wrapper) {
@@ -75,6 +81,8 @@ function handleAddCardFormSubmit(e) {
   closePopup(addCardModal);
   addCardForm.reset();
 }
+
+//with reset maybe think about looking 1 smaller than you normally think
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -91,7 +99,7 @@ function getCardElement(cardData) {
     previewCaption.textContent = cardData.name;
     previewImage.src = cardData.link;
     previewImage.alt = cardData.name;
-    addCardModal.reset();
+    /*addCardModal.reset();*/
   });
   // find delete button
 
@@ -136,9 +144,9 @@ profileEditButton.addEventListener("click", () => {
 });
 
 
-modalClose.addEventListener("click", closePopup);
-cardModalClose.addEventListener("click", closePopup);
-previewImageModalClose.addEventListener("click", closePopup);
+modalClose.addEventListener("click", () => closePopup(profileEditmodal));
+cardModalClose.addEventListener("click", () => closePopup(addCardModal));
+previewImageModalClose.addEventListener("click", () => closePopup(previewImageModal));
 
 profileEditForm.addEventListener("submit", handleProfileSubmit);
 addCardForm.addEventListener("submit", handleAddCardFormSubmit);
